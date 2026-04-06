@@ -22,13 +22,13 @@ export default function EditorUnavailable({ onBack }: EditorUnavailableProps) {
                 <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
               </svg>
             </span>
-            Editor Unavailable
+            编辑器不可用
           </h2>
           <button 
             onClick={onBack}
             className="flex items-center px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
           >
-            ← Back to Playlist
+            ← 返回播放列表
           </button>
         </div>
       </section>
@@ -43,12 +43,12 @@ export default function EditorUnavailable({ onBack }: EditorUnavailableProps) {
           </div>
           
           <h3 className="text-xl font-medium text-gray-800 dark:text-gray-200 mb-2">
-            The editor is currently in use
+            编辑器当前正在被使用
           </h3>
           
           <div className="text-gray-600 dark:text-gray-400 max-w-md mb-5">
-            <p>The LED Panel can only show one preview at a time.</p>
-            <p>You&apos;ll be redirected when the editor becomes available.</p>
+            <p>LED 面板一次只能显示一个预览。</p>
+            <p>当编辑器可用时，您将被重定向。</p>
           </div>
           
           {/* Improved progress bar with smoother animation */}
@@ -57,7 +57,7 @@ export default function EditorUnavailable({ onBack }: EditorUnavailableProps) {
           </div>
           
           <p className="text-gray-500 dark:text-gray-400 text-sm">
-            Waiting for editor to become available...
+            等待编辑器可用...
           </p>
         </div>
       </section>

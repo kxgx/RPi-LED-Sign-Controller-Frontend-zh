@@ -24,10 +24,10 @@ export default function TimelineScrubber({
   return (
     <div>
       <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">Timeline</label>
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">时间轴</label>
         {keyframes && keyframes.length > 0 && (
           <span className="text-xs text-gray-500 dark:text-gray-400">
-            {keyframes.length} keyframe{keyframes.length !== 1 ? 's' : ''}
+            {keyframes.length} 个关键帧
           </span>
         )}
       </div>
@@ -64,7 +64,7 @@ export default function TimelineScrubber({
           onClick={isPlaying ? onStopPlayback : onStartPlayback}
           disabled={!canPlay && !isPlaying}
         >
-          {isPlaying ? 'Stop' : 'Play'}
+          {isPlaying ? '停止' : '播放'}
         </button>
       </div>
       <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">

@@ -32,43 +32,43 @@ const presetOptions: Array<{
 }> = [
   {
     id: 'Pulse',
-    label: 'Full-Screen Pulse',
-    description: 'Breathing brightness fade through the palette.'
+    label: '全屏脉冲',
+    description: '通过调色板进行呼吸亮度渐变。'
   },
   {
     id: 'PaletteWave',
-    label: 'Palette Wave',
-    description: 'Animated gradient bands sweeping across the canvas.'
+    label: '调色板波浪',
+    description: '动画渐变带在画布上扫过。'
   },
   {
     id: 'DualPulse',
-    label: 'Dual-Phase Pulse',
-    description: 'Two offset pulses overlapping for a lively beat.'
+    label: '双相脉冲',
+    description: '两个偏移脉冲重叠以产生生动的节拍。'
   },
   {
     id: 'ColorFade',
-    label: 'Color Fade',
-    description: 'Slowly drifting color wash using the palette order.'
+    label: '颜色渐变',
+    description: '使用调色板顺序缓慢漂移的颜色洗刷。'
   },
   {
     id: 'Strobe',
-    label: 'Strobe',
-    description: 'Bold flash with a configurable fade out.'
+    label: '频闪',
+    description: '具有可配置淡出的粗体闪烁。'
   },
   {
     id: 'Sparkle',
-    label: 'Sparkle Fill',
-    description: 'Sparkling pixels across the entire panel.'
+    label: '闪烁填充',
+    description: '在整个面板上闪烁的像素。'
   },
   {
     id: 'Plasma',
-    label: 'Plasma Flow',
-    description: 'Organic plasma waves generated from layered noise.'
+    label: '等离子流',
+    description: '由分层噪声产生的有机等离子波。'
   },
   {
     id: 'MosaicTwinkle',
-    label: 'Mosaic Twinkle',
-    description: 'Colorful square tiles gently twinkling across the screen.'
+    label: '马赛克闪烁',
+    description: '彩色方块瓷砖在屏幕上轻轻闪烁。'
   }
 ];
 
@@ -334,7 +334,7 @@ export default function AnimationInputEditor({
       case 'Pulse':
         return (
           <NumberInputControl
-            label="Cycle Duration"
+            label="周期持续时间"
             value={animationContent.cycle_ms}
             onChange={(value) =>
               setAnimationContent((current) =>
@@ -351,7 +351,7 @@ export default function AnimationInputEditor({
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
             <NumberInputControl
-              label="Cycle Duration"
+              label="周期持续时间"
               value={animationContent.cycle_ms}
               onChange={(value) =>
                 setAnimationContent((current) =>
@@ -364,7 +364,7 @@ export default function AnimationInputEditor({
               step={100}
             />
             <NumberInputControl
-              label="Wave Count"
+              label="波浪数量"
               value={animationContent.wave_count}
               onChange={(value) =>
                 setAnimationContent((current) =>
@@ -380,7 +380,7 @@ export default function AnimationInputEditor({
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
             <NumberInputControl
-              label="Cycle Duration"
+              label="周期持续时间"
               value={animationContent.cycle_ms}
               onChange={(value) =>
                 setAnimationContent((current) =>
@@ -393,7 +393,7 @@ export default function AnimationInputEditor({
               step={100}
             />
             <FloatInputControl
-              label="Phase Offset"
+              label="相位偏移"
               value={animationContent.phase_offset}
               min={0}
               max={1}
@@ -411,7 +411,7 @@ export default function AnimationInputEditor({
       case 'ColorFade':
         return (
           <FloatInputControl
-            label="Drift Speed"
+            label="漂移速度"
             value={animationContent.drift_speed}
             min={0.05}
             max={2}
@@ -435,7 +435,7 @@ export default function AnimationInputEditor({
           <>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
               <NumberInputControl
-                label="Flash Hold"
+                label="闪烁保持"
                 value={animationContent.flash_ms}
                 onChange={(value) =>
                   setAnimationContent((current) =>
@@ -448,7 +448,7 @@ export default function AnimationInputEditor({
                 step={20}
               />
               <NumberInputControl
-                label="Fade Duration"
+                label="淡出持续时间"
                 value={animationContent.fade_ms}
                 onChange={(value) =>
                   setAnimationContent((current) =>
@@ -465,10 +465,10 @@ export default function AnimationInputEditor({
               <div className="flex items-center justify-between">
                 <div>
                   <p className="font-medium text-gray-800 dark:text-gray-200">
-                    Randomize Strobe
+                    随机化频闪
                   </p>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Randomize the timing between flashes for a more organic feel.
+                    随机化闪烁之间的时间间隔，以获得更自然的感觉。
                   </p>
                 </div>
                 <button
@@ -505,7 +505,7 @@ export default function AnimationInputEditor({
               </div>
               {randomizeEnabled && (
                 <FloatInputControl
-                  label="Randomization Factor"
+                  label="随机化因子"
                   value={randomizationFactor}
                   min={0.05}
                   max={1}
@@ -531,7 +531,7 @@ export default function AnimationInputEditor({
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
             <FloatInputControl
-              label="Sparkle Density (% of pixels)"
+              label="闪烁密度（像素百分比）"
               value={densityPercent}
               min={5}
               max={60}
@@ -546,7 +546,7 @@ export default function AnimationInputEditor({
               }}
             />
             <NumberInputControl
-              label="Twinkle Interval"
+              label="闪烁间隔"
               value={animationContent.twinkle_ms}
               onChange={(value) =>
                 setAnimationContent((current) =>
@@ -565,7 +565,7 @@ export default function AnimationInputEditor({
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
             <FloatInputControl
-              label="Flow Speed"
+              label="流动速度"
               value={animationContent.flow_speed}
               min={0.05}
               max={3}
@@ -579,7 +579,7 @@ export default function AnimationInputEditor({
               }}
             />
             <FloatInputControl
-              label="Detail Scale"
+              label="细节缩放"
               value={animationContent.noise_scale}
               min={0.2}
               max={5}
@@ -605,7 +605,7 @@ export default function AnimationInputEditor({
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
             <NumberInputControl
-              label="Tile Size"
+              label="瓷砖大小"
               value={animationContent.tile_size}
               onChange={(value) =>
                 setAnimationContent((current) => {
@@ -626,7 +626,7 @@ export default function AnimationInputEditor({
               maxValue={12}
             />
             <FloatInputControl
-              label="Flow Speed"
+              label="流动速度"
               value={animationContent.flow_speed}
               min={0.05}
               max={3}
@@ -642,7 +642,7 @@ export default function AnimationInputEditor({
               }}
             />
             <NumberInputControl
-              label="Border Size"
+              label="边框大小"
               value={animationContent.border_size}
               onChange={(value) => {
                 const maxBorder = Math.max(0, animationContent.tile_size - 1);
@@ -660,7 +660,7 @@ export default function AnimationInputEditor({
             />
             <div className="mb-6 relative">
               <label className="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
-                Border Color:
+                边框颜色：
               </label>
               <div className="relative" ref={borderColorButtonRef}>
                 <button
@@ -673,7 +673,7 @@ export default function AnimationInputEditor({
                     style={{ backgroundColor: borderColorHex }}
                   ></span>
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-200">
-                    {showBorderColorPicker ? 'Close Picker' : 'Adjust Color'}
+                    {showBorderColorPicker ? '关闭选择器' : '调整颜色'}
                   </span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -716,7 +716,7 @@ export default function AnimationInputEditor({
                             <path fillRule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-14a2 2 0 10-4 0v1a2 2 0 104 0V2zm3 0a2 2 0 10-4 0v1a2 2 0 104 0V2zm3 0a2 2 0 10-4 0v1a2 2 0 104 0V2z" clipRule="evenodd" />
                           </svg>
                         </span>
-                        Mosaic Border Color
+                        马赛克边框颜色
                       </h3>
                     </div>
                     <ColorPicker
@@ -735,7 +735,7 @@ export default function AnimationInputEditor({
                         className="px-3 py-1.5 text-sm rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition-colors font-medium"
                         onClick={() => setShowBorderColorPicker(false)}
                       >
-                        Close
+                        关闭
                       </button>
                     </div>
                   </div>
@@ -755,7 +755,7 @@ export default function AnimationInputEditor({
       <div className="flex items-center justify-center h-40">
         <div className="text-center">
           <div className="animate-spin inline-block w-8 h-8 border-4 border-indigo-500 border-t-transparent rounded-full mb-2"></div>
-          <p className="text-gray-600 dark:text-gray-400">Loading animation settings...</p>
+          <p className="text-gray-600 dark:text-gray-400">正在加载动画设置...</p>
         </div>
       </div>
     );
@@ -778,7 +778,7 @@ export default function AnimationInputEditor({
               <path d="M4 4a2 2 0 012-2h2a2 2 0 012 2v1.382a1 1 0 01-.553.894L8 7l1.447.724A1 1 0 0110 8.618V10a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm8 0a2 2 0 012-2h2a2 2 0 012 2v2.618a1 1 0 01-.553.894L16 8l1.447.724a1 1 0 01.553.894V14a2 2 0 01-2 2h-2a2 2 0 01-2-2V4z" />
             </svg>
           </span>
-          Animation Preset
+          动画预设
         </h3>
         <div className="grid gap-3 md:grid-cols-2">
           {presetOptions.map((preset) => (
@@ -806,7 +806,7 @@ export default function AnimationInputEditor({
                 <path fillRule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-14a2 2 0 10-4 0v1a2 2 0 104 0V2zm3 0a2 2 0 10-4 0v1a2 2 0 104 0V2zm3 0a2 2 0 10-4 0v1a2 2 0 104 0V2z" />
               </svg>
             </span>
-            Animation Colors
+            动画颜色
           </h3>
           <button
             onClick={() => addPaletteColor()}
@@ -815,7 +815,7 @@ export default function AnimationInputEditor({
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
             </svg>
-            Add Color
+            添加颜色
           </button>
         </div>
 
@@ -845,23 +845,23 @@ export default function AnimationInputEditor({
                 <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
               </svg>
             </span>
-            Animation Parameters
+            动画参数
           </h3>
           <button
             onClick={resetAnimationParameters}
             className="px-3 py-1.5 text-sm rounded-lg border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300 bg-red-50 dark:bg-red-900/20 hover:bg-red-100 dark:hover:bg-red-900/30 transition-colors"
           >
-            Reset to defaults
+            重置为默认值
           </button>
         </div>
         {renderPresetControls()}
       </section>
 
       <NumberInputControl
-        label="Duration (Playlist Item)"
+        label="持续时间（播放列表条目）"
         value={form.duration || 10}
         onChange={(value) => updateDuration(value)}
-        suffix="seconds"
+        suffix="秒"
         minValue={2}
         maxValue={120}
       />

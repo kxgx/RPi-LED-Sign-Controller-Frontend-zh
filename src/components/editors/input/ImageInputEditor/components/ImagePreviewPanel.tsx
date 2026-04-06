@@ -232,7 +232,7 @@ export default function ImagePreviewPanel({
               />
             </svg>
           </span>
-          Image Preview
+          图片预览
         </h3>
         {panelInfo && (
           <span className="text-sm text-gray-500 dark:text-gray-400">
@@ -292,7 +292,7 @@ export default function ImagePreviewPanel({
         ) : (
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 pointer-events-none">
             <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-              {uploading ? 'Uploading...' : 'Click or drag and drop an image to upload'}
+              {uploading ? '上传中...' : '点击或拖拽图片以上传'}
             </p>
             <p className="text-xs text-gray-500 dark:text-gray-400">PNG, JPG, GIF up to 30MB</p>
           </div>
@@ -301,7 +301,7 @@ export default function ImagePreviewPanel({
       {imageData && (
         <div>
           <div className="flex items-center justify-between">
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">Zoom</label>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">缩放</label>
             <span className="text-sm font-medium text-gray-700 dark:text-gray-200">
               {Math.round((imageData.transform.scale || 1) * 100)}%
             </span>

@@ -107,7 +107,7 @@ export default function ClockInputEditor({
       <div className="flex items-center justify-center h-40">
         <div className="text-center">
           <div className="animate-spin inline-block w-8 h-8 border-4 border-indigo-500 border-t-transparent rounded-full mb-2" />
-          <p className="text-gray-600 dark:text-gray-400">Loading editor...</p>
+          <p className="text-gray-600 dark:text-gray-400">正在加载编辑器...</p>
         </div>
       </div>
     );
@@ -127,7 +127,7 @@ export default function ClockInputEditor({
                 />
               </svg>
             </span>
-            Clock Preview
+            时钟预览
           </h3>
         </div>
         <ClockPreview
@@ -139,8 +139,8 @@ export default function ClockInputEditor({
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <NumberInputControl
-          label="Duration"
-          suffix="seconds"
+          label="持续时间"
+          suffix="秒"
           value={duration}
           onChange={updateDuration}
           minValue={1}
@@ -149,15 +149,15 @@ export default function ClockInputEditor({
         />
 
         <div>
-          <label className="block text-gray-700 dark:text-gray-300 mb-2 font-medium">Clock Format:</label>
+          <label className="block text-gray-700 dark:text-gray-300 mb-2 font-medium">时钟格式：</label>
           <div className="flex gap-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm p-2 h-14">
             <FormatButton
-              label="24-hour"
+              label="24小时制"
               active={clockSettings.format === '24h'}
               onClick={() => updateFormat('24h')}
             />
             <FormatButton
-              label="12-hour"
+              label="12小时制"
               active={clockSettings.format === '12h'}
               onClick={() => updateFormat('12h')}
             />
@@ -165,7 +165,7 @@ export default function ClockInputEditor({
         </div>
 
         <div>
-          <label className="block text-gray-700 dark:text-gray-300 mb-2 font-medium">Show Seconds:</label>
+          <label className="block text-gray-700 dark:text-gray-300 mb-2 font-medium">显示秒数：</label>
           <div className="flex items-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm p-2 h-14">
             <label className="relative inline-flex items-center cursor-pointer">
               <input
@@ -176,7 +176,7 @@ export default function ClockInputEditor({
               />
               <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-indigo-300 dark:peer-focus:ring-indigo-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-indigo-600"></div>
               <span className="ml-3 text-sm text-gray-700 dark:text-gray-300">
-                {clockSettings.show_seconds ? 'Yes' : 'No'}
+                {clockSettings.show_seconds ? '是' : '否'}
               </span>
             </label>
           </div>
@@ -185,7 +185,7 @@ export default function ClockInputEditor({
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900/60">
-          <p className="text-sm font-medium text-gray-700 dark:text-gray-200 mb-3">Clock Color</p>
+          <p className="text-sm font-medium text-gray-700 dark:text-gray-200 mb-3">时钟颜色</p>
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 rounded-full border border-gray-200 dark:border-gray-600" style={colorSwatchStyle} />
             <span className="text-sm text-gray-600 dark:text-gray-300">
@@ -204,7 +204,7 @@ export default function ClockInputEditor({
             </div>
             <div>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                The clock uses the built-in system time of your Raspberry Pi. Make sure the device time zone is configured correctly for accurate display.
+                时钟使用树莓派的内置系统时间。请确保设备时区配置正确以保证显示准确。
               </p>
             </div>
           </div>

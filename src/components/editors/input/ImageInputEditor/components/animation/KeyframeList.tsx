@@ -26,21 +26,21 @@ export default function KeyframeList({
   return (
     <div className="space-y-3">
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <h3 className="text-lg font-medium text-gray-800 dark:text-gray-200">Keyframes</h3>
+        <h3 className="text-lg font-medium text-gray-800 dark:text-gray-200">关键帧</h3>
         <div className="flex flex-wrap items-center gap-2">
           <button
             type="button"
             className="px-3 py-1.5 text-sm rounded-lg border border-indigo-200 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 bg-indigo-50 dark:bg-indigo-900/20 hover:bg-indigo-100 dark:hover:bg-indigo-900/30 transition-colors disabled:opacity-50"
             onClick={onAddKeyframe}
           >
-            + Add Keyframe at Current Time
+            + 在当前时间添加关键帧
           </button>
           <button
             type="button"
             className="px-3 py-1.5 text-sm rounded-lg border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300 bg-red-50 dark:bg-red-900/20 hover:bg-red-100 dark:hover:bg-red-900/30 transition-colors"
             onClick={onClearAll}
           >
-            Clear All
+            清除全部
           </button>
         </div>
       </div>
@@ -71,7 +71,7 @@ export default function KeyframeList({
                 </div>
                 <div className="flex flex-1 items-center justify-between gap-3 pr-24">
                   <div>
-                    <p className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">Timestamp</p>
+                    <p className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">时间戳</p>
                     <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                       {(keyframe.timestamp_ms / 1000).toFixed(2)}s
                     </p>

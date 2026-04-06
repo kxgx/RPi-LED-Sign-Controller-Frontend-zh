@@ -84,7 +84,7 @@ export default function ImageInputEditor({
       <div className="flex items-center justify-center h-40">
         <div className="text-center">
           <div className="animate-spin inline-block w-8 h-8 border-4 border-indigo-500 border-t-transparent rounded-full mb-2"></div>
-          <p className="text-gray-600 dark:text-gray-400">Loading editor...</p>
+          <p className="text-gray-600 dark:text-gray-400">正在加载编辑器...</p>
         </div>
       </div>
     );
@@ -128,19 +128,19 @@ export default function ImageInputEditor({
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <NumberInputControl
-                label="Number of Repeats"
+                label="重复次数"
                 value={imageData.animation.iterations ?? form.repeat_count ?? 1}
                 onChange={animation.handleIterationsChange}
-                suffix="times"
+                suffix="次"
                 minValue={0}
                 defaultValue={1}
                 className="mb-0"
               />
               <NumberInputControl
-                label="Timeline Length"
+                label="时间轴长度"
                 value={animation.timelineLengthSec}
                 onChange={animation.handleTimelineLengthChange}
-                suffix="seconds"
+                suffix="秒"
                 minValue={timelineMinSeconds}
                 maxValue={60}
                 defaultValue={5}
@@ -161,7 +161,7 @@ export default function ImageInputEditor({
         ) : (
           <div className="transition-all duration-300 ease-in-out overflow-hidden">
             <NumberInputControl
-              label="Duration (seconds)"
+              label="持续时间（秒）"
               value={form.duration || 10}
               onChange={handleDurationChange}
               suffix="seconds"
