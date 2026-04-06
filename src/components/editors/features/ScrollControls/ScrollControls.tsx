@@ -41,10 +41,10 @@ export default function ScrollControls({
             className="sr-only peer"
           />
           <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-indigo-300 dark:peer-focus:ring-indigo-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-indigo-600"></div>
-          <span className="ml-3 font-medium text-gray-800 dark:text-gray-200">Scroll Text</span>
+          <span className="ml-3 font-medium text-gray-800 dark:text-gray-200">滚动文本</span>
         </label>
         <div className="ml-2 text-sm text-gray-500 dark:text-gray-400">
-          (Scrolling text moves across the display)
+          (滚动文本将在显示屏上移动)
         </div>
       </div>
 
@@ -56,10 +56,10 @@ export default function ScrollControls({
         />
 
         <NumberInputControl
-          label="Number of Repeats"
+          label="重复次数"
           value={repeatCount}
           onChange={onRepeatCountChange}
-          suffix="times"
+          suffix="次"
           minValue={1}
           defaultValue={1}
         />
@@ -68,10 +68,10 @@ export default function ScrollControls({
       {/* Static duration control */}
       <div className={`transition-all duration-300 ease-in-out overflow-hidden ${!isScrollEnabled ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 invisible'}`}>
         <NumberInputControl
-          label="Duration (seconds)"
+          label="持续时间（秒）"
           value={duration}
           onChange={onDurationChange}
-          suffix="seconds"
+          suffix="秒"
           minValue={1}
           defaultValue={10}
         />

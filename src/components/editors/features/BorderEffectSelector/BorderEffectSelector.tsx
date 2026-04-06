@@ -45,7 +45,7 @@ export default function BorderEffectSelector({
   
   return (
     <div className="mb-8 border-t border-gray-200 dark:border-gray-700 pt-8">
-        <h3 className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-4">Border Effect</h3>
+        <h3 className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-4">边框效果</h3>
       {/* Effect selector buttons */}
       <EffectOptions 
         selectedEffect={selectedEffect} 
@@ -61,9 +61,9 @@ export default function BorderEffectSelector({
                   <path fillRule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-14a2 2 0 10-4 0v1a2 2 0 104 0V2zm3 0a2 2 0 10-4 0v1a2 2 0 104 0V2zm3 0a2 2 0 10-4 0v1a2 2 0 104 0V2z" />
                 </svg>
               </span>
-              {selectedEffect === 'gradient' ? 'Gradient Colors' : 
-               selectedEffect === 'pulse' ? 'Pulse Colors' : 
-               'Sparkle Colors'}
+              {selectedEffect === 'gradient' ? '渐变颜色' : 
+               selectedEffect === 'pulse' ? '脉冲颜色' : 
+               '闪烁颜色'}
             </h4>
             
             <div className="flex space-x-2">
@@ -82,14 +82,14 @@ export default function BorderEffectSelector({
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
                       </svg>
-                      Done
+                      完成
                     </span>
                   ) : (
                     <span className="flex items-center">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
                       </svg>
-                      Edit
+                      编辑
                     </span>
                   )}
                 </button>
@@ -102,7 +102,7 @@ export default function BorderEffectSelector({
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
                 </svg>
-                Add Color
+                添加颜色
               </button>
             </div>
           </div>
@@ -135,14 +135,14 @@ export default function BorderEffectSelector({
           {/* Mobile helper text */}
           {gradientColors.length > 1 && !editMode && (
             <div className="mt-3 text-xs text-gray-500 dark:text-gray-400 md:hidden text-center py-2 bg-gray-50 dark:bg-gray-900/10 rounded-md">
-              Tap the &quot;Edit&quot; button above to remove colors
+              点击上方的“编辑”按钮以移除颜色
             </div>
           )}
           
           {/* Edit mode instruction */}
           {editMode && (
             <div className="mt-3 text-xs text-center py-2 bg-red-50 dark:bg-red-900/10 text-red-500 dark:text-red-400 rounded-md">
-              Tap on a color to remove it • Tap &quot;Done&quot; when finished
+              点击颜色以移除 • 完成后点击“完成”
             </div>
           )}
         </div>

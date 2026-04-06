@@ -211,7 +211,7 @@ export default function PlaylistView({ onEditItem, onAddNewItem }: PlaylistViewP
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
             </svg>
-            Add New Item
+            添加新条目
           </button>
         </div>
       </section>
@@ -230,7 +230,7 @@ export default function PlaylistView({ onEditItem, onAddNewItem }: PlaylistViewP
               <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
               </svg>
-              <p className="text-gray-600 dark:text-gray-300 mb-6">Your playlist is empty. Add some items to display on the LED sign.</p>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">您的播放列表为空。请添加一些条目以在 LED 显示屏上显示。</p>
             </div>
           </section>
         ) : (

@@ -66,8 +66,8 @@ export default function HomePage() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
         <div>
-          <h1 className="text-2xl font-medium text-gray-800 dark:text-white">RPi LED Sign Controller</h1>
-          <p className="text-sm text-gray-500 dark:text-gray-400">Manage your LED display from the web</p>
+          <h1 className="text-2xl font-medium text-gray-800 dark:text-white">树莓派 LED 显示屏控制器</h1>
+          <p className="text-sm text-gray-500 dark:text-gray-400">通过网页管理您的 LED 显示屏</p>
         </div>
       </header>
       

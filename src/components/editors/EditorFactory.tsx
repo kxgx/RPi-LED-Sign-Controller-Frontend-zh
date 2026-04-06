@@ -48,7 +48,7 @@ export default function EditorFactory({
       } catch (error) {
         console.error('Error checking preview status:', error);
         setStatus({
-          message: 'Error checking if another user is editing. Try refreshing the page.',
+          message: '检查是否有其他用户正在编辑时出错。请尝试刷新页面。',
           type: 'error'
         });
       } finally {
@@ -133,7 +133,7 @@ export default function EditorFactory({
         .catch(error => {
           console.error("Failed to load item type:", error);
           setStatus({
-            message: "Error loading item. Using default content type.",
+            message: "加载条目时出错。使用默认内容类型。",
             type: "error"
           });
         })
@@ -185,10 +185,10 @@ export default function EditorFactory({
   
   // Map content types to their display titles
   const contentTypeDisplayTitles: Record<ContentType, string> = {
-    [ContentType.Text]: 'Text Message',
-    [ContentType.Image]: 'Image',
-    [ContentType.Animation]: 'Animation',
-    [ContentType.Clock]: 'Clock'
+    [ContentType.Text]: '文本消息',
+    [ContentType.Image]: '图片',
+    [ContentType.Animation]: '动画',
+    [ContentType.Clock]: '时钟'
   };
 
   // Get the appropriate title for the current content type

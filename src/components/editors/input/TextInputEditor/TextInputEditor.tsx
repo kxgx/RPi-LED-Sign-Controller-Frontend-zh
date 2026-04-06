@@ -192,7 +192,7 @@ export default function TextInputEditor({
       <div className="flex items-center justify-center h-40">
         <div className="text-center">
           <div className="animate-spin inline-block w-8 h-8 border-4 border-indigo-500 border-t-transparent rounded-full mb-2"></div>
-          <p className="text-gray-600 dark:text-gray-400">Loading editor content...</p>
+          <p className="text-gray-600 dark:text-gray-400">正在加载编辑器内容...</p>
         </div>
       </div>
     );

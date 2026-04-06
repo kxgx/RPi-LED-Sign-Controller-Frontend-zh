@@ -36,10 +36,10 @@ export default function EditorShell({
 }: EditorShellProps) {
   // Available content types
   const contentTypes = [
-    { id: ContentType.Text, label: 'Text Message', icon: 'message' },
-    { id: ContentType.Image, label: 'Image', icon: 'image', disabled: false },
-    { id: ContentType.Animation, label: 'Animation', icon: 'animation', disabled: false },
-    { id: ContentType.Clock, label: 'Clock', icon: 'clock', disabled: false },
+    { id: ContentType.Text, label: '文本消息', icon: 'message' },
+    { id: ContentType.Image, label: '图片', icon: 'image', disabled: false },
+    { id: ContentType.Animation, label: '动画', icon: 'animation', disabled: false },
+    { id: ContentType.Clock, label: '时钟', icon: 'clock', disabled: false },
   ];
   
   return (
@@ -53,13 +53,13 @@ export default function EditorShell({
                 <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
               </svg>
             </span>
-            {isNewItem ? 'Add New Item' : `Edit ${title}`}
+            {isNewItem ? '添加新条目' : `编辑 ${title}`}
           </h2>
           <button 
             onClick={onBack}
             className="flex items-center px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
           >
-            ← Back to Playlist
+            ← 返回播放列表
           </button>
         </div>
       </section>
@@ -73,7 +73,7 @@ export default function EditorShell({
                 <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
               </svg>
             </span>
-            Content Type
+            内容类型
           </h3>
           
           <div className="flex flex-wrap gap-3">
@@ -119,7 +119,7 @@ export default function EditorShell({
                 
                 {type.disabled && (
                   <span className="ml-1.5 text-xs bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 px-1.5 py-0.5 rounded-full">
-                    Soon
+                    即将推出
                   </span>
                 )}
               </button>
@@ -154,14 +154,14 @@ export default function EditorShell({
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
-                Saving...
+                保存中...
               </>
             ) : (
               <>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                Save
+                保存
               </>
             )}
           </button>
@@ -169,7 +169,7 @@ export default function EditorShell({
             onClick={onBack}
             className="px-6 py-2.5 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors shadow-md"
           >
-            Cancel
+            取消
           </button>
         </div>
       </section>
